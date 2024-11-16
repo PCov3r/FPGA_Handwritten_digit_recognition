@@ -37,7 +37,7 @@ localparam period = 20;
 
 reg clk, enable, reset, done;  
 reg signed [15:0] img [0:195];
-reg signed [7:0] out [0:32];
+reg signed [15:0] out [0:31];
 
 dense_layer1 layer1 (.clk(clk), .enable(enable), .reset(reset), .pooled_img(img),
                      .layer_out(out), .layer_done(done));

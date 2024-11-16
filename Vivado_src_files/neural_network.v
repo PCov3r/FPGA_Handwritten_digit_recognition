@@ -92,11 +92,11 @@ module neural_network(
     else if(enable) begin
         if(finished_pool) begin // Average done
             pool[pool_final_addr] = pool_final;
-            pool_addr <= pool_addr + 2; // Increment address
-            pool_row <= pool_row + 2;
+            pool_addr = pool_addr + 2; // Increment address
+            pool_row = pool_row + 2;
             if(pool_row == 28) begin // End of row, go down by 2 rows
-                pool_addr <= pool_addr + pool_row;
-                pool_row <= 0;
+                pool_addr = pool_addr + pool_row;
+                pool_row = 0;
             end
             if(pool_in4_addr == 783) begin // Global averaging done
                 pool_enable <= 0;

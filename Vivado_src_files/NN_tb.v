@@ -32,7 +32,7 @@ reg signed [7:0] img [0:783];
 reg [7:0] digit_out;
 reg NN_done;
 
-    neural_network NN(.clk(clk), .enable(enable), .reset(reset)
+    neural_network NN(.clk(clk), .enable(enable), .reset(reset),
                   .img(img), .digit_out(digit_out), .NN_done(NN_done));
 
 initial begin
